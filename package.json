@@ -1,0 +1,21 @@
+{
+  "name": "selenium-proxy-authentication",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "npm run test-web && npm run test-mocha",
+    "test-web": "node tests/selenium.js",
+    "test-mocha": "./node_modules/.bin/mocha tests/mocha_test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chromedriver": "^86.0.0",
+    "selenium-webdriver": "^4.0.0-alpha.7",
+    "mocha": "^8.2.0"
+  }
+}
