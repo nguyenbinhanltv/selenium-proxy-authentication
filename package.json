@@ -16,8 +16,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "selenium-webdriver": "^4.0.0-alpha.7",
-    "mocha": "^8.2.0"
+    "chai": "^4.2.0",
+    "mocha": "^8.2.0",
+    "selenium-webdriver": "^4.0.0-alpha.7"
   },
   "devDependencies": {
     "chromedriver": "^86.0.0"

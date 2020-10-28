@@ -17,12 +17,8 @@ let configs = require('../configs/configs');
     .build();
   try {
     await driver.get(configs.pageUrl);
-    // (await (await driver).switchTo().alert()).sendKeys("guru99");
-    // (await (await driver).switchTo().alert()).accept();
-    // (await (await driver).switchTo().alert()).sendKeys("guru99");
-    // (await (await driver).switchTo().alert()).accept();
-    (await driver).findElement(webdriver.By.id("email")).sendKeys(configs.Admin.username);
-    (await driver).findElement(webdriver.By.id("password")).sendKeys(configs.Admin.username);
+    (await driver).findElement(webdriver.By.id("email")).sendKeys(configs.Admin.email);
+    (await driver).findElement(webdriver.By.id("password")).sendKeys(configs.Admin.password);
   } catch (err) {
     throw Error(err);
   }

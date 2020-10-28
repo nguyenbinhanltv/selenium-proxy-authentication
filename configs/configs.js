@@ -1,5 +1,5 @@
 module.exports.Admin = {
-  username: 'admin',
+  email: 'admin@gmail.com',
   password: 'admin'
 };
 
