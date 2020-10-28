@@ -21,6 +21,8 @@ let configs = require('../configs/configs');
     // (await (await driver).switchTo().alert()).accept();
     // (await (await driver).switchTo().alert()).sendKeys("guru99");
     // (await (await driver).switchTo().alert()).accept();
+    (await driver).findElement(webdriver.By.id("email")).sendKeys(configs.Admin.username);
+    (await driver).findElement(webdriver.By.id("password")).sendKeys(configs.Admin.username);
   } catch (err) {
     throw Error(err);
   }

@@ -9,13 +9,17 @@
   "scripts": {
     "test": "npm run test-web && npm run test-mocha",
     "test-web": "node tests/selenium.js",
-    "test-mocha": "./node_modules/.bin/mocha tests/mocha_test.js"
+    "test-mocha": "./node_modules/.bin/mocha tests/mocha_test.js",
+    "install-client": "cd proxy-authentication && npm i",
+    "start-client": "cd proxy-authentication && npm start"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "chromedriver": "^86.0.0",
     "selenium-webdriver": "^4.0.0-alpha.7",
     "mocha": "^8.2.0"
+  },
+  "devDependencies": {
+    "chromedriver": "^86.0.0"
   }
 }
