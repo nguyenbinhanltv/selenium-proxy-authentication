@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, FormGroup, FormControl } from "react-bootstrap";
+import { Button, FormGroup, FormControl,Form } from "react-bootstrap";
 import './App.css';
 
 function App() {
@@ -21,31 +21,35 @@ function App() {
 
   return (
     <div className="Login">
-    
+    <h1>Selenium Test Login</h1>
       <form onSubmit={handleSubmit}>
-        <FormGroup controlId="email" bsSize="large">
-          Email
-          <FormControl
+        <Form.Group controlId="formGroupEmail" className="input-email">
+        <Form.Label className="eml-pass">Email</Form.Label>
+          <Form.Control className="email-input"
             autoFocus
             type="email"
             value={email}
             onChange={e => setEmail(e.target.value)}
+            autoComplete="off"
+            placeholder="abc@gmail.com"
+            
           />
-        </FormGroup>
-        <FormGroup controlId="password" bsSize="large">
-          Password
-          <FormControl
+
+        </Form.Group>
+        <Form.Group controlId="formGroupPassword" bsSize="large">
+        <Form.Label className="eml-pass" >Password</Form.Label>
+          <Form.Control className="password-input"
             value={password}
             onChange={e => setPassword(e.target.value)}
             type="password"
           />
-        </FormGroup>
-        <Button block bsSize="large" disabled={!validateForm()} type="submit" onClick={compareTo(email, password)}>
+        </Form.Group>
+        <Button block bsSize="large"  type="submit" onClick={compareTo(email, password)}>
           Login
         </Button>
       </form>
 
-      <div>
+      <div className="login-mess">
         <p>{message}</p>
       </div>
     </div>
