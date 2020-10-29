@@ -10,3 +10,15 @@ describe('Username and password are correct and will pass http proxies.', functi
     chai.expect(compareTo(data)).to.be.true;
   });
 });
+
+describe('Username and password are wrong and wont pass http proxies.', function() {
+  it('The proxy authentication should fail because wrong password !', function() {
+    let data = { email: "admin@gmail.com", password: "" };
+    chai.expect(compareTo(data)).to.be.false;
+  });
+
+  it('The proxy authentication should fail because wrong gmail !', function() {
+    let data = { email: "", password: "admin" };
+    chai.expect(compareTo(data)).to.be.false;
+  });
+});
