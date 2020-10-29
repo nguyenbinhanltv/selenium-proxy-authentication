@@ -16,7 +16,7 @@ function App() {
   }
 
   function compareTo(email, password) {
-    message = email === "admin@gmail.com" && password === "admin" ? "Proxy Authentication Done" : "";
+    message = email === "admin@gmail.com" && password === "admin" ? "Proxy Authentication Done" : "Not authorized";
   }
 
   return (
