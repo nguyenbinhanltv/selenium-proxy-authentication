@@ -32,7 +32,7 @@ function App() {
             onChange={e => setEmail(e.target.value)}
             autoComplete="off"
             placeholder="abc@gmail.com"
-            
+            id="email"
           />
 
         </Form.Group>
@@ -44,7 +44,7 @@ function App() {
             type="password"
           />
         </Form.Group>
-        <Button block bsSize="large"  type="submit" onClick={compareTo(email, password)}>
+        <Button block bsSize="large" disabled={!validateForm()} type="submit" onClick={compareTo(email, password)}>
           Login
         </Button>
       </form>

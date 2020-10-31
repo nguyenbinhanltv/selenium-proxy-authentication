@@ -4,3 +4,4 @@ module.exports.Admin = {
 };
 
 module.exports.pageUrl = 'http://localhost:3000/';
+module.exports.commonPageUrl = 'https://www.selenium.dev/';
